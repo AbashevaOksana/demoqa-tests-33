@@ -19,7 +19,7 @@ public class SimpleJUnitTest {
         Configuration.browserSize = "1920*1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.holdBrowserOpen = true;
+        //Configuration.holdBrowserOpen = true;
         Configuration.timeout = 5000;
     }
 
@@ -40,7 +40,7 @@ public class SimpleJUnitTest {
         $("[class=react-datepicker__week]").find(byText("4")).click();//
         $("#subjectsInput").setValue("Maths").pressEnter();
         $("#hobbiesWrapper").find(byText("Sports")).click();
-        File file = $("#uploadPicture").uploadFromClasspath("photo_1.jpg");
+        $("#uploadPicture").uploadFromClasspath("photo_1.jpg");
         $("#currentAddress").setValue("Izhevsk 15");
         $("#state").click();
         $("#react-select-3-option-0").click();
@@ -48,16 +48,16 @@ public class SimpleJUnitTest {
         $("#react-select-4-option-0").click();
         $("#submit").click();
 
-        $(".table-responsive").shouldHave(text("Oksana Abasheva"),
-        (text("abasheva@ya.ru")),
-        (text("Female")),
-        (text("9935275449")),
-        (text("04 February,1983")),
-        (text("Maths")),
-        (text("Sports")),
-        (text("photo_1.jpg")),
-        (text("Izhevsk 15")),
-        (text("NCR Delhi")));
+        $(".table-responsive").shouldHave(text("Oksana Abasheva"));
+        $(".table-responsive").shouldHave(text("abasheva@ya.ru"));
+        $(".table-responsive").shouldHave(text("Female"));
+        $(".table-responsive").shouldHave(text("9935275449"));
+        $(".table-responsive").shouldHave(text("04 February,1983"));
+        $(".table-responsive").shouldHave(text("Maths"));
+        $(".table-responsive").shouldHave(text("Sports"));
+        $(".table-responsive").shouldHave(text("photo_1.jpg"));
+        $(".table-responsive").shouldHave(text("Izhevsk 15"));
+        $(".table-responsive").shouldHave(text("NCR Delhi"));
 
         $("#closeLargeModal").click();
     }
