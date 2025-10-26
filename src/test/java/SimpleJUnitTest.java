@@ -36,10 +36,10 @@ public class SimpleJUnitTest {
         $("#userNumber").setValue("9935275449");
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("February");//
-        $(".react-datepicker__year-select").find(byText("1983")).click();//
-        $(".react-datepicker__week").find(byText("4")).click();//
+        $(".react-datepicker__year-select").$(byText("1983")).click();//
+        $(".react-datepicker__week").$(byText("4")).click();//
         $("#subjectsInput").setValue("Maths").pressEnter();
-        $("#hobbiesWrapper").find(byText("Sports")).click();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
         $("#uploadPicture").uploadFromClasspath("photo_1.jpg");
         $("#currentAddress").setValue("Izhevsk 15");
         $("#state").click();
