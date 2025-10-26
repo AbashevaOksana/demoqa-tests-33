@@ -31,7 +31,7 @@ public class SimpleJUnitTest {
         $("#firstName").setValue("Oksana");
         $("#lastName").setValue("Abasheva");
         $("#userEmail").setValue("abasheva@ya.ru");
-        //$("#genterWrapper").find(byText("Female")).click();
+        //$("#genterWrapper").$(byText("Female")).click();
         $("#gender-radio-2").parent().click();
         $("#userNumber").setValue("9935275449");
         $("#dateOfBirthInput").click();
