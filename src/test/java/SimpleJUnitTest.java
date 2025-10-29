@@ -15,11 +15,10 @@ import static com.codeborne.selenide.Selenide.*;
 public class SimpleJUnitTest {
 
     @BeforeAll
-    static void beforeAll() {
-        Configuration.browserSize = "1920*1080";
+    static void setupEnviroment() {
+        Configuration.browserSize = "1920х1080";
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        //Configuration.holdBrowserOpen = true;
         Configuration.timeout = 5000;
     }
 
@@ -31,7 +30,6 @@ public class SimpleJUnitTest {
         $("#firstName").setValue("Oksana");
         $("#lastName").setValue("Abasheva");
         $("#userEmail").setValue("abasheva@ya.ru");
-        //$("#genterWrapper").$(byText("Female")).click();
         $("#gender-radio-2").parent().click();
         $("#userNumber").setValue("9935275449");
         $("#dateOfBirthInput").click();
